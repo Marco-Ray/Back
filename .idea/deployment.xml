@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="zehuan-wang.edinburgh.domains" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
+    <serverData>
+      <paths name="zehuan-wang.edinburgh.domains">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/public_html/fatfree/Volcano-Back" local="$PROJECT_DIR$" web="/fatfree/Volcano-Back" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
