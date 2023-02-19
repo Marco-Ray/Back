@@ -27,9 +27,25 @@ $f3->route('GET /volcano/@type',
     function($f3, $params)
     {
         $controller = new Controller('volcano');
-        $f3->set('ctrl', $controller);
+        $data = $controller->getVolcanoByType($params['type']);
+        echo json_encode($data);
+    }
+);
 
-        $data = $controller->getVolcano($params['type']);
+$f3->route('PUT /volcano/like/@v_id',
+    function($f3, $params)
+    {
+        $controller = new Controller('volcano');
+        $data = $controller->likeVolcano($params['v_id']);
+        echo json_encode($data);
+    }
+);
+
+$f3->route('PUT /volcano/dislike/@v_id',
+    function($f3, $params)
+    {
+        $controller = new Controller('volcano');
+        $data = $controller->dislikeVolcano($params['v_id']);
         echo json_encode($data);
     }
 );
