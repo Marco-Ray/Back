@@ -34,7 +34,7 @@ class Controller extends DB\SQL\Mapper
         $num_likes = $volcano->likes;
         $volcano->likes = $num_likes + 1;
         $volcano->update();
-        return array('status_code'=>204);;
+        return array('status_code'=>204, 'likes'=>$num_likes + 1);;
     }
 
     public function dislikeVolcano($v_id)
@@ -43,6 +43,6 @@ class Controller extends DB\SQL\Mapper
         $num_likes = $volcano->likes;
         $volcano->likes = $num_likes - 1;
         $volcano->update();
-        return array('status_code'=>204);;
+        return array('status_code'=>204, 'likes'=>$num_likes - 1);;
     }
 }
