@@ -50,6 +50,15 @@ $f3->route('PUT /volcano/dislike/@v_id',
     }
 );
 
+$f3->route('GET /volcano/learnmore',
+    function($f3)
+    {
+        $controller = new Controller('learnmore');
+        $data = $controller->getGraphs();
+        echo json_encode($data);
+    }
+);
+
 //====================================================================
 // Run the FFF engine //
 $f3->run();

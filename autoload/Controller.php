@@ -45,4 +45,19 @@ class Controller extends DB\SQL\Mapper
         $volcano->update();
         return array('status_code'=>204, 'likes'=>$num_likes - 1);;
     }
+
+    public function getGraphs()
+    {
+        $result_array = array();
+        $this->load();
+        $count = 0;
+        while (!$this->dry()) {
+//        while ($count < 5) {
+            $record = $this->cast();
+            array_push($result_array, $record);
+            $this->next();
+//            $count += 1;
+        }
+        return $result_array;
+    }
 }
